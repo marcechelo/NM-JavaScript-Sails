@@ -1,5 +1,5 @@
 /**
- * Usuario.js
+ * Pulsacion.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -9,19 +9,13 @@ module.exports = {
 
   attributes: {
 
-    nombre:{
-      type: 'string',
-      required: true
-    },
-    apellido:{
+    nombreRaspberry:{
       type:'string',
       required:true
     },
-    pulsaciones:{
-      collection:'Pulsacion',
-      via:'usuarioIdFK'
+    usuarioIdFK:{
+      model:'Usuario'
     }
-
 
   },
 
